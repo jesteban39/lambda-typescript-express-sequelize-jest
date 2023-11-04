@@ -1,5 +1,5 @@
 {
-  "name": "lambda-typescript-express-sequelize",
+  "name": "lambda-typescript-express-sequelize-jest",
   "version": "1.0.0",
   "description": "Muestra de proyecto para una res API usando typeScript Express Sequelize.",
   "main": "dist/src/index.js",
@@ -7,7 +7,7 @@
     "start": "serverless offline",
     "dev": "tsc && node -r module-alias/register ./dist",
     "deploy": "serverless deploy",
-    "test": "jest",
+    "test": "jest --coverage",
     "git": "git add . && cat >> commit.txt && git commit -F commit.txt && rm -rf commit.txt && git push"
   },
   "keywords": [],
@@ -17,9 +17,6 @@
       "src"
     ],
     "ext": "ts",
-    "ignore": [
-      "src/public"
-    ],
     "exec": "./node_modules/.bin/ts-node --files -r tsconfig-paths/register ./src"
   },
   "dependencies": {
@@ -55,14 +52,5 @@
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^4.6.3"
-  },
-  "_moduleAliases": {
-    "@db": "dist/database/db",
-    "@api": "dist/api/index",
-    "@appTypes": "dist/declarations/types",
-    "@config": "dist/config",
-    "@controllers": "dist/routes/controllers",
-    "@declarations": "dist/declarations",
-    "@util": "dist/util"
   }
 }

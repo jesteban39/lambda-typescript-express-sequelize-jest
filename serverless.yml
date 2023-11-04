@@ -1,11 +1,11 @@
-service: lambda-typescript-express-sequelize
+service: lambda-typescript-express-sequelize-jest
 frameworkVersion: '3'
 
 provider:
   name: aws
   runtime: nodejs18.x
   iam:
-   role: arn:aws:iam::664349461262:role/lambdaExecution
+    role: arn:aws:iam::664349461262:role/lambdaExecution
 
 functions:
   api:

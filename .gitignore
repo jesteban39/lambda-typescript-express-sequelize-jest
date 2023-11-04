@@ -43,9 +43,9 @@ package-lock.json
 
 # serverless
 .serverless
+.esbuild
 
 # production
 /build
 build
 .build
-.esbuild
