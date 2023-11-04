@@ -2,6 +2,7 @@
   "name": "lambda-typescript-express-sequelize",
   "version": "1.0.0",
   "description": "Muestra de proyecto para una res API usando typeScript Express Sequelize.",
+  "main": "dist/src/index.js",
   "scripts": {
     "start": "serverless offline",
     "dev": "tsc && node -r module-alias/register ./dist",
@@ -11,6 +12,16 @@
   },
   "keywords": [],
   "author": "",
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": "ts",
+    "ignore": [
+      "src/public"
+    ],
+    "exec": "./node_modules/.bin/ts-node --files -r tsconfig-paths/register ./src"
+  },
   "dependencies": {
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.3.1",
@@ -42,6 +53,7 @@
     "serverless-offline": "^13.1.1",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^4.6.3"
   },
   "_moduleAliases": {

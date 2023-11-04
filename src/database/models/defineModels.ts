@@ -1,15 +1,13 @@
-import type { Sequelize } from 'sequelize'
+import type {Sequelize} from 'sequelize'
 
-import defineUser from './User.js'
-import defineSupplier from './Supplier.js'
+import defineUser from './User'
+import defineSupplier from './Supplier'
 
 export const defineModels = (sequelize: Sequelize) => {
+  const User = defineUser(sequelize)
+  const Supplier = defineSupplier(sequelize)
 
-    const User = defineUser(sequelize)
-    const Supplier = defineSupplier(sequelize)
-
-    /* ~~~~~~~ Relaciones entre tablas ~~~~~~~ */
-
+  /* ~~~~~~~ Relaciones entre tablas ~~~~~~~ */
 }
 
 export default defineModels
