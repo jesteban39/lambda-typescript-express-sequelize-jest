@@ -11,7 +11,7 @@ import api from './api'
 import envVars from '@config/envVars'
 import StatusCodes from '@config/statusCodes'
 import {NodeEnvs} from '@declarations/enums'
-import {RouteError} from '@declarations/classes'
+import {RouteError} from '@declarations/errors'
 
 // **** Init express **** //
 

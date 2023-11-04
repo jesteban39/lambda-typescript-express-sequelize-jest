@@ -1,5 +1,5 @@
 import {Sequelize} from 'sequelize'
-import {defineModels} from './models/defineModels'
+import {defineModels} from './defineModels'
 import EnvVars from '@config/envVars'
 
 // de tipo any para poder eliminar getConnection
@@ -14,11 +14,16 @@ const defineSequelize = () => {
       min: 0,
       max: 10,
       idle: 0,
-      acquire: 3000,
-      evict: 3000
+      acquire: 9000,
+      evict: 9000
     },
     port: EnvVars.dbport,
-    logging: false
+    logging: false,
+    define: {
+      freezeTableName: true,
+      underscored: true,
+      timestamps: false
+    }
   })
   defineModels(sequelize)
   return sequelize

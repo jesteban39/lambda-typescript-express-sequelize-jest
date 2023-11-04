@@ -1,72 +1,16 @@
 openapi: 3.0.0
 info:
-  title: lambda-typescript-express-sequelizeipt
-  description: ducumentacion de la api tablero de incidentes
+  title: lambda-typescript-express-sequelize-jest
+  description: ducumentacion de lambda-typescript-express-sequelize-jest
   version: 1.0.0
   servers:
     - http://localhost:4000
-paths:
-  /api/User/all:
-    get:
-      summary: null
-      description: null
-      responses:
-        '200':
-          description: null
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  allOf:
-                    - $ref: '#/components/schemas/User'
-  /api/User/add:
-    post:
-      summary: null
-      description: null
-      responses:
-        '200':
-          description: null
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  allOf:
-                    - $ref: '#/components/schemas/User'
-  /api/Supplier/all:
-    get:
-      summary: null
-      description: null
-      responses:
-        '200':
-          description: null
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  allOf:
-                    - $ref: '#/components/schemas/Supplier'
-  /api/Supplier/add:
-    post:
-      summary: null
-      description: null
-      responses:
-        '200':
-          description: null
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  allOf:
-                    - $ref: '#/components/schemas/Supplier'
+paths: ''
 components:
   parameters: ''
-  definitions:
+  definitions: ''
+  schemas:
     User:
-      type: object
       properties:
         uuid:
           type: string
@@ -84,12 +28,16 @@ components:
           description: Id de usuario de Cognito aws
           example: '3973'
     Supplier:
-      type: object
       properties:
         uuid:
           type: string
           required: true
           description: identificador universal unico para la tabal proveedor
+          example: '3973'
+        descripcion:
+          type: string
+          required: false
+          description: descripcion del proveedor
           example: '3973'
         empresa:
           type: string
@@ -97,40 +45,23 @@ components:
           description: nombre de empresa del proveedor
           example: '3973'
         equipo:
-          type: number
+          type: string
           required: false
-          description: proveedor equipo
           example: '3973'
         fechaInicio:
           type: string
           required: true
-          description: proveedor fecha inicio
           example: '3973'
         horaInicio:
           type: string
           required: true
-          description: proveedor hora inicio
           example: '3973'
         fechaHoraFin:
           type: string
           required: false
-          description: proveedor fecha hora fin
-          example: '3973'
-        descripcion:
-          type: string
-          required: false
-          description: descripcion del proveedor
           example: '3973'
         activo:
-          type: boolean
+          type: string
           required: true
-          description: proveedor activo
           example: '3973'
-  schemas:
-    User:
-      allOf:
-        - $ref: '#/components/definitions/User'
-    Supplier:
-      allOf:
-        - $ref: '#/components/definitions/Supplier'
   tags: ''

@@ -5,7 +5,7 @@
   "main": "dist/src/index.js",
   "scripts": {
     "start": "serverless offline",
-    "dev": "tsc && node -r module-alias/register ./dist",
+    "dev": "nodemon",
     "deploy": "serverless deploy",
     "test": "jest --coverage",
     "git": "git add . && cat >> commit.txt && git commit -F commit.txt && rm -rf commit.txt && git push"
